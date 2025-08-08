@@ -1,0 +1,9 @@
+.buttonField{
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+}
+button{
+    padding: 10px;
+    margin: 5px;
+}
