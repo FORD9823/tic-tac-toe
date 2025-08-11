@@ -6,7 +6,16 @@ const Field = ({...props}) => {
 
  return (
         <>
-            <FieldLayout  field = {props.field} currentPlayer = {props.currentPlayer} setField = {props.setField}/>
+            <FieldLayout  
+                currentPlayer = {props.currentPlayer}
+                isGameEnded = {props.isGameEnded}
+                isDraw = {props.isDraw}
+                field = {props.field}
+                setCurrentPlayer = {props.setCurrentPlayer}
+                setIsGameEnded = {props.setIsGameEnded}
+                setIsDraw = {props.setIsDraw}
+                setField = {props.setField}
+            />
         </>
     )
     

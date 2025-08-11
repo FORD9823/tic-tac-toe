@@ -1,9 +1,6 @@
-import React from "react";
-import './Field.css'
 
-const FieldLayout = ({...props}) => {
-    
-    const onClick = (event) => {
+export const onButtonClick = (event) => {
+        console.log(event.target)
         if(props.currentPlayer === 'X'){
             if(props.field[event.target.value] === ''){
                 props.field[event.target.value] = props.currentPlayer
@@ -19,21 +16,6 @@ const FieldLayout = ({...props}) => {
                 alert('Ячейка занята')
             }
         }
+        
+        console.log(props.field)
     }
-    const res = props.field.map((item, index) => {
-                    return <button value = {index} key={index} onClick={onClick}>{item}</button>
-                })
-
- return (
-        <>
-            <div className="buttonField">
-                {res}
-            </div>
-        </>
-    )
-    
-}
-
-
-
-export default FieldLayout
